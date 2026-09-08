@@ -282,18 +282,6 @@ concurrency:
 
 If an iPhone-triggered workflow is still running when the scheduled fallback starts, the second workflow should wait rather than cancelling the first one.
 
-## Resume file
-
-The workflow currently expects:
-
-```text
-resume/Kunal_Sondkar_Cloud_DevOps_Engineer_Resume.pdf
-```
-
-If the file name changes, update the `RESUME_PATH` environment variable in the workflow.
-
-The script also validates the resume file size before uploading.
-
 ## Debugging
 
 The workflow saves runtime artifacts under:
