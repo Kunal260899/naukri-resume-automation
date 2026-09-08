@@ -85,6 +85,65 @@ Naukri-DailyUpdate/
 - A GitHub repository with GitHub Actions enabled
 - A GitHub Actions Secret named `NAUKRI_STORAGE_STATE`
 
+## Add Your Resume
+
+Place your resume PDF inside the `resume/` directory.
+
+For example:
+
+```text
+resume/
+└── Kunal_Sondkar_Cloud_DevOps_Engineer_Resume.pdf
+```
+
+### Important: Update the Resume Path
+
+You must update the resume path in **two places**.
+
+### A. GitHub Actions workflow
+
+Open:
+
+```text
+.github/workflows/update-naukri.yml
+```
+
+Find:
+
+```yaml
+RESUME_PATH: 'resume/Kunal_Sondkar_Cloud_DevOps_Engineer_Resume.pdf'
+```
+
+Change it to the path of your resume.
+
+For example:
+
+```yaml
+RESUME_PATH: 'resume/your_resume.pdf'
+```
+
+### B. Update Resume Script
+
+Open:
+
+```text
+scripts/update-resume.ts
+```
+
+Make sure the default resume path matches your file.
+
+For example:
+
+```ts
+const RESUME_PATH = path.resolve(
+  process.env.RESUME_PATH ?? 'resume/your_resume.pdf'
+);
+```
+
+Both paths should point to the same resume file.
+
+> If `RESUME_PATH` is provided as an environment variable, that value takes precedence over the default path in `update-resume.ts`.
+
 ## Authentication setup
 
 The Playwright authentication state contains session information such as cookies and local storage.
