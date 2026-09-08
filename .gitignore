@@ -1,0 +1,6 @@
+node_modules/
+playwright/.auth/
+artifacts/
+*.log
+.DS_Store
+.env

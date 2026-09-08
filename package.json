@@ -1,0 +1,20 @@
+{
+  "name": "naukri-profile-updater",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "install:browsers": "playwright install chromium",
+    "update": "tsx scripts/update-resume.ts",
+    "bootstrap": "tsx scripts/setup-session.ts",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "playwright": "^1.55.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
+}
