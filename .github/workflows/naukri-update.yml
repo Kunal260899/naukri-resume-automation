@@ -284,7 +284,7 @@ jobs:
       - name: Update Naukri resume
         env:
           HEADLESS: 'false'
-          RESUME_PATH: 'resume/Kunal_Sondkar_Cloud_DevOps_Engineer_Resume.pdf'
+          RESUME_PATH: 'resume/your_resume.pdf'   #YOUR RESUME GOES HERE
           AUTH_STATE_PATH: 'playwright/.auth/state.json'
           ARTIFACT_DIR: 'artifacts'
           DEBUG: 'pw:browser'
