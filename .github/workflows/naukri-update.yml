@@ -4,9 +4,9 @@ on:
   schedule:
     # FALLBACK ONLY
     # GitHub may delay scheduled workflows.
-    # This is intentionally kept as a backup trigger.
-    - cron: '17 09 * * *'
-      timezone: 'Asia/Kolkata'
+    # This is intentionally kept as a backup trigger. Remobe the comment to enable the trigger
+    #- cron: '17 09 * * *'
+    #  timezone: 'Asia/Kolkata'
 
   # Primary trigger used by the iPhone automation
   workflow_dispatch:
